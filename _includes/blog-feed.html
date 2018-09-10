@@ -2,16 +2,18 @@
   {% for post in site.posts %}
 
   <div class="col s12 m6">
+
     <div class="card">
-      <div class="card-image">
+      <a class="card-image waves-effect waves-block waves-light" href="{{post.url}}">
         <img src="{{post.image}}">
-        <span class="card-title"><a style="color:white">{{ post.title | escape }}</a></span>
-        <a id="{{post.url}}" class="btn-floating halfway-fab waves-effect waves-light red" href="{{ post.url | relative_url }}"><i class="material-icons">more_horiz</i></a>
-      </div>
+        
+
+      </a>
       <div class="card-content">
-        <p>{{post.excerpt}}</p>
+      <span class="card-title"><a style="color:black; font-weight: 400; font-size: 18px;" href="{{post.url}}">{{ post.title | escape }}</a></span>
       </div>
     </div>
+
   </div>
   {% endfor %}
 </div>

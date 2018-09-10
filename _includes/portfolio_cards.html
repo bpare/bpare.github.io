@@ -1,11 +1,13 @@
 <div class="row">
+
+
   <div class="col s12 m6">
     <div class="card medium sticky-action">
       <div class="card-image waves-effect waves-block waves-light">
-        <img class="activator" src="../assets/images/desk.jpg">
+        <img src="../assets/images/desk.jpg" >
       </div>
       <div class="card-action">
-        <span class="card-title activator grey-text text-darken-4">{{site.project_one}}<i class="material-icons right">more_vert</i></span>
+        <span class="card-title activator grey-text text-darken-4">{{site.project_one}}<a id="{{post.url}}" class="btn-floating halfway-fab waves-effect waves-light red" href="{{ post.url | relative_url }}"><i class="material-icons">more_vert</i></a></span>
         <p><a href="{{site.project_one_url}}">{{site.project_button}}</a></p>
       </div>
       <div class="card-reveal">
@@ -14,13 +16,17 @@
       </div>
     </div>
   </div>
+  
+  <a id="{{post.url}}" class="btn-floating halfway-fab waves-effect waves-light red" href="{{ post.url | relative_url }}"><i class="material-icons">more_horiz</i></a>
+  
+  
   <div class="col s12 m6">
     <div class="card medium sticky-action">
       <div class="card-image waves-effect waves-block waves-light">
         <img class="activator" src="../assets/images/typewriter.jpg">
       </div>
       <div class="card-action">
-        <span class="card-title activator grey-text text-darken-4">{{site.project_two}}<i class="material-icons right">more_vert</i></span>
+        <span class="card-title activator grey-text text-darken-4">{{site.project_two}}<a class="material-icons right href="test"">more_vert</a></span>
         <p><a href="{{site.project_two_url}}">{{site.project_button}}</a></p>
       </div>
       <div class="card-reveal">

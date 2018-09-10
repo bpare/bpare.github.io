@@ -1,13 +1,32 @@
 {% include head.html %}
 
+<style>
+#resume:hover {
+
+    letter-spacing: 1px;
+
+
+
+
+}
+
+</style>
   <div id="home" class="section scrollspy">
   <div id="index-banner" class="parallax-container">
     <div class="section no-pad-bot">
       <div class="container">
         <br><br>
-        <h1 class="header center teal-text text-lighten-2">{{ site.title }}</h1>
+        <h1 class="header center teal-text text-lighten-2" style="font-family:Verdana, Geneva, sans-serif">{{ site.title }}</h1>
+        <div style="text-align:center;">
+        
+  <a id="resume" href="assets/BrigittePareResume.pdf" style="color:white; transition: 0.35s; ">[ RESUME ]</a>
+  <a id="resume" href="assets/Academic_Transcript.pdf" style="color:white; transition: 0.35s; padding-left:20px;">[ TRANSCRIPT ]</a>
+    <a id="resume" href="#contact" style="color:white; transition: 0.35s; padding-left:20px; ">[ CONTACT ]</a>
+  <!-- more links here -->
+</div>
         <div class="row center">
-          <h5 class="header col s12 light">{{ site.description }}</h5>
+          <h5 class="header col s12 light" style="color:white; font-weight: 100; font-size: 18px; padding-left:200px; padding-right:200px; ">{{ site.description }}</h5>
+          
         </div>
         <br><br>
 
@@ -23,13 +42,13 @@
 </div>
 
 <div class="container" style="padding:20px;">
-  <div id="portfolio" class="section scrollspy">
-
-  <h3 style="text-align:center;">{{site.portfolio_heading}}</h3>
-
-{% include portfolio_{{site.portfolio_type}}.html %}
-
+  <div id="blog" class="section scrollspy">
+  <h3 style="text-align:center; font-family:Verdana, Geneva, sans-serif;">Projects / Code Samples</h3>
+  {% include blog-feed.html %}
 </div>
+</div>
+
+
 
 
 </div>
@@ -56,12 +75,7 @@
   </div>
 
 
-<div class="container" style="padding:20px;">
-  <div id="blog" class="section scrollspy">
-  <h3 style="text-align:center;">Blog</h3>
-  {% include blog-feed.html %}
-</div>
-</div>
+
 
 <div class="container" style="padding:20px;">
   <div id="contact" class="section scrollspy">
